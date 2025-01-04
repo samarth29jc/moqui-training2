@@ -1,0 +1,6 @@
+moqui.training.MoquiTraining,demo
+
+trainingID,trainingName,trainingDate,trainingPrice,trainingDuration
+T001,Java Basics,2025-01-10,100,2
+T002,Advanced Python,2025-01-15,150,3
+
