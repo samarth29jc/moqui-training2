@@ -2,12 +2,14 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
         <service verb="create" noun="MoquiTraining" type="entity-auto">
             <in-parameters>
-                <auto-parameters include="nonpk"/>
+                <auto-parameters entity-name="moqui.training.MoquiTraining" include="nonpk"/>
                 <parameter name="trainingName" required="true"/>
                 <parameter name="trainingDate" required="true"/>
+                <parameter name="trainingID" required="true"/>
             </in-parameters>
             <out-parameters>
-                <auto-parameters include="pk" required="true"/>
+                <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
+                <parameter name="trainingName" required="true"/>
             </out-parameters>
         </service>
 </services>

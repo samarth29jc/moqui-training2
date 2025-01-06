@@ -15,6 +15,8 @@
                 <select-field field-name="trainingID"/>
                 <select-field field-name="trainingName"/>
                 <select-field field-name="trainingDate"/>
+                <select-field field-name="trainingDuration"/>
+                <select-field field-name="trainingPrice"/>
             </entity-find>
         </actions>
     </service>
