@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+    <service verb="create" noun="MoquiTraining">
+        <in-parameters>
+            <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
+            <parameter name="trainingName" required="true"/>
+            <parameter name="trainingDate" required="true" />
+            <parameter name="trainingDuration" />
+            <parameter name="trainingPrice"/>
+        </in-parameters>
+        <out-parameters>
+            <!--                putting required true here don't work for some reason-->
+            <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
+        </out-parameters>
+        <actions>
+            <service-call name="create#moqui.training.MoquiTraining" in-map="context" out-map="context.trainingId"/>
+        </actions>
+    </service>
+</services>

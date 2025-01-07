@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
 
-<service verb="createUpdate" noun="MoquiTraining">
-    <in-parameters>
-        <parameter name="trainingID"/>
-        <parameter name="trainingName" required="true"/>
-        <parameter name="trainingDate" required="true"  format="MM/DD/YYYY"/>
-        <parameter name="trainingPrice"/>
-        <parameter name="trainingDuration"/>
-    </in-parameters>
-    <out-parameters>
-        <parameter name="trainingID"/>
-    </out-parameters>
-    <actions>
-        <script>
-            <![CDATA[
+    <service verb="store" noun="MoquiTraining">
+        <in-parameters>
+            <parameter name="trainingID"/>
+            <parameter name="trainingName" required="true"/>
+            <parameter name="trainingDate" required="true"/>
+            <parameter name="trainingPrice"/>
+            <parameter name="trainingDuration"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="trainingID"/>
+        </out-parameters>
+        <actions>
+            <script>
+                <![CDATA[
     // Fetch existing record by trainingID or trainingName
     def trainingRecord = ec.entity.find("moqui.training.MoquiTraining")
     if (context.trainingID) {
@@ -44,7 +44,7 @@
         context.trainingID = newTrainingID
     }
    ]]>
-        </script>
-    </actions>
-</service>
-        </services>
+            </script>
+        </actions>
+    </service>
+</services>

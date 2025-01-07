@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
 
-<!--    Service through Groovy Scripts-->
+    <!--    Service through Groovy Scripts-->
     <service verb="create" noun="MoquiTraining" type="script"
              location="component://moqui-training/script/TrainingService.groovy">
         <in-parameters>
             <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
             <parameter name="trainingName" required="true"/>
-            <parameter name="trainingDate" required="true"  format="MM/DD/YYYY" />
+            <parameter name="trainingDate" required="true" />
             <parameter name="trainingDuration" />
             <parameter name="trainingPrice"/>
         </in-parameters>
