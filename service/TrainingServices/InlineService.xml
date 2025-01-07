@@ -3,7 +3,7 @@
     <service verb="create" noun="MoquiTraining">
         <in-parameters>
             <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
-            <parameter name="trainingName" required="true"/>
+            <parameter name="trainingName" required="true" />
             <parameter name="trainingDate" required="true" />
             <parameter name="trainingDuration" />
             <parameter name="trainingPrice"/>
