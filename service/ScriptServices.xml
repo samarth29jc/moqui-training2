@@ -5,12 +5,14 @@
     <service verb="create" noun="MoquiTraining" type="script"
              location="component://moqui-training/script/TrainingService.groovy">
         <in-parameters>
-            <auto-parameters entity-name="moqui.training.MoquiTraining" include="nonpk"/>
+            <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
             <parameter name="trainingName" required="true"/>
-            <parameter name="trainingDate" required="true"/>
+            <parameter name="trainingDate" required="true"  format="MM/DD/YYYY" />
+            <parameter name="trainingDuration" />
+            <parameter name="trainingPrice"/>
         </in-parameters>
         <out-parameters>
-            <parameter name="trainingId"/>
+            <parameter name="trainingId" required="true"/>
         </out-parameters>
     </service>
 

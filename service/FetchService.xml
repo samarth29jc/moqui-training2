@@ -2,8 +2,10 @@
 <services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
     <service verb="fetch" noun="MoquiTraining">
         <in-parameters>
-            <parameter name="trainingName" entity-name="moqui.training.MoquiTraining"/>
-            <parameter name="trainingID" entity-name="moqui.training.MoquiTraining"/>
+            <!--            <parameter name="trainingName" entity-name="moqui.training.MoquiTraining"/>-->
+            <!--            <parameter name="trainingID" entity-name="moqui.training.MoquiTraining"/>-->
+            <parameter name="trainingName" />
+            <parameter name="trainingID"/>
         </in-parameters>
         <out-parameters>
             <parameter name="trainingList" required="true"/>
@@ -14,7 +16,7 @@
                 <econdition field-name="trainingID" ignore-if-empty="true"/>
                 <select-field field-name="trainingID"/>
                 <select-field field-name="trainingName"/>
-                <select-field field-name="trainingDate"/>
+                <select-field field-name="trainingDate" />
                 <select-field field-name="trainingDuration"/>
                 <select-field field-name="trainingPrice"/>
             </entity-find>

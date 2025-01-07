@@ -5,7 +5,7 @@
     <in-parameters>
         <parameter name="trainingID"/>
         <parameter name="trainingName" required="true"/>
-        <parameter name="trainingDate" required="true"/>
+        <parameter name="trainingDate" required="true"  format="MM/DD/YYYY"/>
         <parameter name="trainingPrice"/>
         <parameter name="trainingDuration"/>
     </in-parameters>
