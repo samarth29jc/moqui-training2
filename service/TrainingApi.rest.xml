@@ -1,36 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api 3.xsd" name="Party"  displayName="Party Rest api" version="2.0">
-    <resource name="partyGet" require-authentication="anonymous-all">
-        <id name="partyId">
+
+<!--    Api endpoints for party api-->
+    <resource name="parties" require-authentication="anonymous-all">
+        <method type="post">
+            <!--            <service name="TrainingServices.PartyService.create#Party"/>-->
+            <entity name="Party" operation="create"/>
+        </method>
+          <id name="partyId">
             <method type="get">
                 <entity name="Party" operation="one"/>
             </method>
-        </id>
-
-    </resource>
-
-    <resource name="partyPost" require-authentication="anonymous-all">
-        <method type="post">
-<!--            <service name="TrainingServices.PartyService.create#Party"/>-->
-            <entity name="Party" operation="create"/>
-        </method>
-    </resource>
-
-    <resource name="partyPUT" require-authentication="anonymous-all">
-        <id name="partyId">
             <method type="put">
                 <entity name="Party" operation="update"/>
             </method>
-        </id>
-    </resource>
-    <resource name="partyDelete" require-authentication="anonymous-all">
-        <id name="partyId">
             <method type="delete">
-<!--                <service name="TrainingServices.PartyService.delete#Party"/>-->
+                <!--                <service name="moqui.training.TrainingServices.delete#Party"/>-->
                 <entity name="Party" operation="delete"/>
             </method>
-        </id>
+            <!--    Contact Mechanism Api implementation by hitting the contact endpoint as asked in the git repo -->
+            <resource name="contacts">
+                <method type="get">
+                    <entity name="ContactMech" operation="one"/>
+                </method>
+                <method type="post">
+                    <!--                    <service name="TrainingServices.PartyService.create#ContactMech"/>-->
+                    <entity name="ContactMech" operation="create"/>
+                </method>
+                <!--                Id enpoint inside contacts-->
+                <id name="contactMechID">
+                    <method type="put">
+                        <entity name="ContactMech" operation="update"/>
+                    </method>
+                    <method type="delete">
+                        <entity name="ContactMech" operation="delete"/>
+                    </method>
+                </id>
+            </resource>
+          </id>
     </resource>
+
+
+    <!--    API for product entity-->
+<!--    <resource name="products" require-authentication="anonymous-all">-->
+<!--        <method type="post">-->
+<!--            <entity name="Product" operation="create"/>-->
+<!--        </method>-->
+<!--        <id name="productId">-->
+<!--            <method type="get">-->
+<!--                <entity name="Product" operation="one"/>-->
+<!--            </method>-->
+<!--            <method type="put">-->
+<!--                <entity name="P"-->
+<!--            </method>-->
+<!--        </id>-->
+<!--    </resource>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                            <!--    -->
+                       <!--    Worst practice that many students used in their project and changed the url itself and wrote reduedent code-->
+
+
+
+<!--    <resource name="parties" require-authentication="anonymous-all">-->
+<!--        <id name="partyId">-->
+<!--            <resource name="contacts">-->
+<!--                <method type="get">-->
+<!--                    <entity name="ContactMech" operation="one"/>-->
+<!--                </method>-->
+<!--                <method type="post">-->
+<!--                    &lt;!&ndash;                    <service name="TrainingServices.PartyService.create#ContactMech"/>&ndash;&gt;-->
+<!--                    <entity name="ContactMech" operation="create"/>-->
+<!--                </method>-->
+<!--&lt;!&ndash;                Id enpoint inside contacts&ndash;&gt;-->
+<!--                <id name="contactMechID">-->
+<!--                    <method type="put">-->
+<!--                      <entity name="ContactMech" operation="update"/>-->
+<!--                    </method>-->
+<!--                    <method type="delete">-->
+<!--                      <entity name="ContactMech" operation="delete"/>-->
+<!--                    </method>-->
+<!--                </id>-->
+<!--            </resource>-->
+<!--        </id>-->
+<!--    </resource>-->
+
+
+
+
+
+<!--    <resource name="parties" require-authentication="anonymous-all">-->
+<!--        <id name="partyId">-->
+<!--            <resource name="contacts">-->
+<!--                -->
+<!--            </resource>-->
+<!--        </id>-->
+<!--    </resource>-->
+
+<!--    Api endpoint to delete a Contact with contactMechID-->
+<!--    <resource name="parties" require-authentication="=anonymous-all">-->
+<!--        <id name="partyId">-->
+<!--            <resource name="contacts">-->
+<!--               <id name="contactMechID">-->
+<!--                   <method type="put">-->
+<!--                       <entity name="ContactMech" operation="update"/>-->
+<!--                   </method>-->
+<!--                   <method type="delete">-->
+<!--                       <entity name="ContactMech" operation="delete"/>-->
+<!--                   </method>-->
+<!--               </id>-->
+<!--            </resource>-->
+<!--        </id>-->
+<!--    </resource>-->
+
+
+
+
 
 
 </resource>
