@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+<!--   Post service to create a new party -->
+    <service verb="create" noun="Party" type="entity-auto">
+        <in-parameters>
+            <auto-parameters entity-name="moqui.training.Party" include="all"/>
+            <parameter name="partyType"  required="true"/>
+            <parameter name="partyId"  required="true"/>
+        </in-parameters>
+        <out-parameters>
+            <auto-parameters entity-name="moqui.training.Party" include="pk" required="true"/>
+            <parameter name="partyType" required="true"/>
+        </out-parameters>
+    </service>
+</services>
