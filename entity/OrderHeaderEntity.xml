@@ -8,7 +8,7 @@
         <field name="billingContactMechId" type="id"/>
         <relationship type="one" related="moqui.training.Party" short-alias="party"/>
         <relationship type="one" related="moqui.training.ContactMech" short-alias="shippingContactMechId"
-                      fk-name="ship">
+                      fk-name="ship" >
             <key-map field-name="shippingContactMechId" related="contactMechId"/>
         </relationship>
         <relationship type="one" related="moqui.training.ContactMech" short-alias="billingContactMechId"
