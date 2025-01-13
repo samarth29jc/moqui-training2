@@ -6,7 +6,7 @@
         <field name="status" type="text-medium"/>
         <field name="orderId" type="id"/>
         <field name="productId" type="id"/>
-        <relationship type="one" related="moqui.training.OrderHeader" short-alias="orderId"/>
+        <relationship type="one" related="moqui.training.OrderHeader" short-alias="orderId" />
         <relationship type="one" related="moqui.training.Product" short-alias="productId"/>
     </entity>
 </entities>

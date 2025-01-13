@@ -4,7 +4,6 @@
         <in-parameters>
             <auto-parameters entity-name="moqui.training.MoquiTraining" include="all"/>
             <parameter name="trainingName"  required="true"/>
-            <parameter name="trainingDate"  required="true"/>
             <parameter name="trainingID" required="true"/>
         </in-parameters>
         <out-parameters>

@@ -4,7 +4,7 @@
 <!--    Api endpoints for party api-->
     <resource name="parties" require-authentication="anonymous-all">
         <method type="post">
-            <!--            <service name="TrainingServices.PartyService.create#Party"/>-->
+            <!--            <service name="TrainingServices.PartyService.create#Party"/>-->cd
             <entity name="Party" operation="create"/>
         </method>
           <id name="partyId">

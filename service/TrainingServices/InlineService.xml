@@ -9,9 +9,10 @@
             <parameter name="trainingPrice"/>
         </in-parameters>
         <out-parameters>
-            <!--                putting required true here don't work for some reason-->
             <auto-parameters entity-name="moqui.training.MoquiTraining" include="pk" required="true"/>
         </out-parameters>
+
+<!--        calls the auto-entity service we created above-->
         <actions>
             <service-call name="create#moqui.training.MoquiTraining" in-map="context" out-map="context.trainingId"/>
         </actions>

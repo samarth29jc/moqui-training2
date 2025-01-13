@@ -4,15 +4,18 @@
         <field name="orderId" type="id" is-pk="true"/>
         <field name="orderDate" type="date" not-null="true"/>
         <field name="partyId" type="id"/>
-        <field name="shippingContactMechId" type="id"/>
+        <field name="shippingContactMechId" type="id" />
         <field name="billingContactMechId" type="id"/>
         <relationship type="one" related="moqui.training.Party" short-alias="party"/>
+
+<!--        ECA rules can be written to perform cascade on the entity but its isn't asked in the assignment -->
+<!--        Entity ECA rules in Moqui are like automatic helpers for your data. They let you react to changes in your data and perform actions based on those changes-->
         <relationship type="one" related="moqui.training.ContactMech" short-alias="shippingContactMechId"
-                      fk-name="ship" >
-            <key-map field-name="shippingContactMechId" related="contactMechId"/>
+                      fk-name="ship">
+            <key-map field-name="shippingContactMechId" related="contactMechId" />
         </relationship>
         <relationship type="one" related="moqui.training.ContactMech" short-alias="billingContactMechId"
-                    fk-name="bill" >
+                    fk-name="bill">
             <key-map field-name="billingContactMechId" related="contactMechId"/>
         </relationship>
     </entity>

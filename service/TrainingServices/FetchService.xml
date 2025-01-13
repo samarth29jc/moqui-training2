@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd">
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-3.xsd" >
     <service verb="fetch" noun="MoquiTraining">
         <in-parameters>
-            <!--            <parameter name="trainingName" entity-name="moqui.training.MoquiTraining"/>-->
-            <!--            <parameter name="trainingID" entity-name="moqui.training.MoquiTraining"/>-->
             <parameter name="trainingName" />
             <parameter name="trainingID"/>
         </in-parameters>
@@ -11,8 +9,10 @@
             <parameter name="trainingList" required="true"/>
         </out-parameters>
         <actions>
+<!--            entity find will find the entity with the given name-->
+<!--            It have attributes like one,list,cache and entity-name  -->
             <entity-find entity-name="moqui.training.MoquiTraining" list="trainingList">
-                <econdition field-name="trainingName" ignore-if-empty="true"/>
+                <econdition field-name="trainingName" ignore-if-empty="true" />
                 <econdition field-name="trainingID" ignore-if-empty="true"/>
                 <select-field field-name="trainingID"/>
                 <select-field field-name="trainingName"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <entity-facade-xml type="demo">
-    <moqui.training.MoquiTraining trainingID = '1' trainingName = 'Omi' trainingDate = '03/01/2025' trainingPrice
-            = '10000' trainingDuration = '12'/>
+    <moqui.training.MoquiTraining trainingID = '1' trainingName = 'Sandeep' trainingDate = '11/01/2025' trainingPrice
+            = '20000' trainingDuration = '24'/>
 </entity-facade-xml>

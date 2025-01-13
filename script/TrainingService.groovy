@@ -5,28 +5,18 @@ import org.moqui.entity.EntityValue
 ExecutionContext ec = context.ec
 
 // Input parameters
+def trainingID=context.trainingID
 def trainingName = context.trainingName
 def trainingDate = context.trainingDate
 def trainingPrice = context.trainingPrice
 def trainingDuration = context.trainingDuration
 
-// Validate required fields
-if (!trainingName) {
-    ec.message.addError("Training name is required.")
-    return
-}
-
-if (!trainingDate) {
-    ec.message.addError("Training date is required.")
-    return
-}
-
 // Explicitly generate a unique ID
-def trainingID = ec.entity.sequencedIdPrimary("MoquiTraining", null, null)
+//def trainingID = ec.entity.sequencedIdPrimary("MoquiTraining", null, null)
+
 
 // Create the MoquiTraining entity record
 EntityValue trainingRecord = ec.entity.makeValue("moqui.training.MoquiTraining")
-
 trainingRecord.set("trainingID", trainingID) // Explicitly set trainingId
 trainingRecord.set("trainingName", trainingName)
 trainingRecord.set("trainingDate", trainingDate)
