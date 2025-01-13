@@ -31,13 +31,13 @@
         context.trainingID = trainingRecord.trainingID
     } else {
         // Use the provided trainingID or generate a new one
-        def newTrainingID = context.trainingID ?: ec.entity.sequencedIdPrimary("moqui.training.MoquiTraining", null, null)
+        def newTrainingID = context.trainingID
         ec.entity.makeValue("moqui.training.MoquiTraining")
             .set("trainingID", newTrainingID)
             .set("trainingName", context.trainingName)
             .set("trainingDate", context.trainingDate)
             .set("trainingPrice", context.trainingPrice)
-            .set("trainingDuration", trainingDuration)
+            .set("trainingDuration", context.trainingDuration)
             .create()
         context.trainingID = newTrainingID
     }
