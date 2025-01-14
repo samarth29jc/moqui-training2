@@ -4,7 +4,7 @@
 <!--    Api endpoints for party api-->
     <resource name="parties" require-authentication="anonymous-all">
         <method type="post">
-            <!--            <service name="TrainingServices.PartyService.create#Party"/>-->cd
+            <!--            <service name="TrainingServices.PartyService.create#Party"/>-->
             <entity name="Party" operation="create"/>
         </method>
           <id name="partyId">
@@ -15,7 +15,6 @@
                 <entity name="Party" operation="update"/>
             </method>
             <method type="delete">
-                <!--                <service name="moqui.training.TrainingServices.delete#Party"/>-->
                 <entity name="Party" operation="delete"/>
             </method>
             <!--    Contact Mechanism Api implementation by hitting the contact endpoint as asked in the git repo -->
