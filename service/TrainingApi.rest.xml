@@ -23,7 +23,7 @@
                     <entity name="ContactMech" operation="one"/>
                 </method>
                 <method type="post">
-                    <!--                    <service name="TrainingServices.PartyService.create#ContactMech"/>-->
+
                     <entity name="ContactMech" operation="create"/>
                 </method>
                 <!--                Id enpoint inside contacts-->
